@@ -1,0 +1,122 @@
+* {
+    box-sizing:border-box
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.slideshow-container {
+  max-width: 62.5rem;
+  position: relative;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: rgb(172, 216, 14);
+  font-weight: bolder;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 5px 5px 0;
+  user-select: none;
+}
+
+
+.next {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(253, 85, 7, 0.8);
+}
+
+
+.text {
+  color: #f2f2f2;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 4px;
+  text-align: center;
+  background-color: coral;
+  font-family: 'Kanit', sans-serif;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: 'Kanit', sans-serif;
+  font-weight: bold;
+}
+
+
+.dot {
+  cursor: pointer;
+  height: 16px;
+  width: 16px;
+  margin: 0 3px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #413737;
+}
+
+
+.fade {
+	animation: slide-in-blurred-top 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+
+ @-webkit-keyframes slide-in-blurred-top {
+    0% {
+              transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+              transform-origin: 50% 0%;
+              filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+              transform: translateY(0) scaleY(1) scaleX(1);
+              transform-origin: 50% 50%;
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-blurred-top {
+    0% {
+              transform: translateY(-1000px) scaleY(2.5) scaleX(0.2);
+              transform-origin: 50% 0%;
+              filter: blur(40px);
+              opacity: 0;
+    }
+    100% {
+              transform: translateY(0) scaleY(1) scaleX(1);
+              transform-origin: 50% 50%;
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  
